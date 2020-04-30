@@ -1,0 +1,7 @@
+*.pyc
+*.jpeg
+*.png
+*.jpg
+media/
+db.sqlite3
+.idea/
