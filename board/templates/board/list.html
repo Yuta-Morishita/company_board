@@ -1,11 +1,6 @@
 {% extends 'base.html' %}
 
 
-{% block header %}
-<div class="container alert alert-primary" role="alert">
-    社内SNS
-</div>
-{% endblock header %}
 {% block content %}
 <a href="{% url 'board:create' %}" class="btn btn-info" role="button" aria-pressed="true">新規作成</a>
 {% for board in boards %}

@@ -16,7 +16,11 @@
 <body>
 
     {% block header %}
-
+    <div class="container alert alert-primary" role="alert">
+        社内SNS
+        <a href="{% url 'account_signup' %}">singnup</a>
+        <a href="{% url 'account_login' %}">login</a>
+    </div>
     {% endblock header %}
 
 
