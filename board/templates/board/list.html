@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block header %}
+<div class="container alert alert-primary" role="alert">
+    社内SNS
+</div>
+{% endblock header %}
+{% block content %}
+<a href="{% url 'board:create' %}" class="btn btn-info" role="button" aria-pressed="true">新規作成</a>
+{% for board in boards %}
+<div class="container alert alert-warning" role="alert">
+    <p><a href="{% url 'board:detail' board.pk %}">{{ board.title }}</a></p>
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-primary">Primary</button>
+</div>
+{% endfor %}
+{% endblock content %}

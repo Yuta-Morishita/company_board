@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1>新規作成</h1>
+<form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
+    <p>タイトル：<input type="text" name="title"></p>
+    <p>内容：<input type="text" name="content"></p>
+    <p>投稿者：<input type="text" name="author"></p>
+    <p>画像：<input type="file" name="image"></p>
+    <input type="submit" value="作成する">
+</form>
+<a href="{% url 'board:list' %}" class="btn btn-info" role="button" aria-pressed="true">社内連絡一覧に戻る</a>
+{% endblock content %}
